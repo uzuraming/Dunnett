@@ -12,6 +12,10 @@ file_path <- 'FACS_data.csv'
 # CSVから得たデータをraw_dataに代入
 raw_data <- read.csv(file_path)
 
+# RowDataからそれぞれの要素を抽出
+Conc=factor(raw_data$Conc)
+Net=raw_data$Net
+
 #--------------------------------------
 # 分散分析を行う関数である aov()，
 # 実際のダネット検定の計算を行う関数である glht()
